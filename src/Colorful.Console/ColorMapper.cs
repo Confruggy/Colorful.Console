@@ -59,13 +59,13 @@ namespace Colorful
         private const int STD_OUTPUT_HANDLE = -11;                               // per WinBase.h
         private static readonly IntPtr INVALID_HANDLE_VALUE = new IntPtr(-1);    // per WinBase.h
 
-        [DllImport("kernel32.dll", SetLastError = true)]
+        [DllImport("kernel32", SetLastError = true)]
         private static extern IntPtr GetStdHandle(int nStdHandle);
 
-        [DllImport("kernel32.dll", SetLastError = true)]
+        [DllImport("kernel32", SetLastError = true)]
         private static extern bool GetConsoleScreenBufferInfoEx(IntPtr hConsoleOutput, ref CONSOLE_SCREEN_BUFFER_INFO_EX csbe);
 
-        [DllImport("kernel32.dll", SetLastError = true)]
+        [DllImport("kernel32", SetLastError = true)]
         private static extern bool SetConsoleScreenBufferInfoEx(IntPtr hConsoleOutput, ref CONSOLE_SCREEN_BUFFER_INFO_EX csbe);
 
         /// <summary>
